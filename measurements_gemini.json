@@ -1,0 +1,40 @@
+{
+  "provider": "google-gemini",
+  "model": "gemini-3.6-flash",
+  "token_counts": {
+    "sentence": {
+      "en": 10,
+      "ru": 16,
+      "kk": 18
+    },
+    "complaint": {
+      "en": 53,
+      "ru": 68,
+      "kk": 115
+    },
+    "system_prompt": {
+      "en": 41,
+      "ru": 52,
+      "kk": 88
+    }
+  },
+  "request_tokens": {
+    "en": 94,
+    "ru": 120,
+    "kk": 203
+  },
+  "one_request_billed": {
+    "en": {
+      "input_tokens": 94,
+      "output_tokens": 53
+    },
+    "ru": {
+      "input_tokens": 120,
+      "output_tokens": 99
+    },
+    "kk": {
+      "input_tokens": 203,
+      "output_tokens": 166
+    }
+  }
+}
