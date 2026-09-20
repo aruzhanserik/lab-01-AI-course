@@ -17,35 +17,30 @@ LANGUAGES = ("en", "ru", "kk")
 
 #: One sentence. Short enough to inspect token by token.
 SENTENCE: Dict[str, str] = {
-    "en": "The bank raised interest rates by two percentage points last quarter.",
-    "ru": "Банк повысил процентные ставки на два процентных пункта в прошлом квартале.",
-    "kk": "Банк өткен тоқсанда пайыздық мөлшерлемені екі пайыздық тармаққа көтерді.",
+    "en": "I transferred money to my savings account yesterday.",
+    "ru": "Вчера я перевёл деньги на свой сберегательный счёт.",
+    "kk": "Кеше мен жинақ шотыма ақша аудардым.",
 }
 
-#: A realistic support request -- the kind of text a production system pays for
-#: thousands of times a day.
+#: A realistic support request about a bank transfer.
 COMPLAINT: Dict[str, str] = {
     "en": (
-        "Good afternoon. I opened a deposit at your branch in March and was told "
-        "the rate was fixed for twelve months. In August the rate on my account "
-        "dropped without any notice. I have attached the contract and the "
-        "statement. Please explain on what basis the rate was changed and "
-        "restore the original terms."
+        "Good afternoon. I made a transfer from my account yesterday, "
+        "but the money has not arrived. The amount was deducted from my balance. "
+        "I have attached the transaction receipt. Please explain why the transfer "
+        "has not been completed and tell me what I should do next."
     ),
     "ru": (
-        "Добрый день. Я открыл депозит в вашем отделении в марте, и мне сказали, "
-        "что ставка зафиксирована на двенадцать месяцев. В августе ставка по "
-        "моему счёту снизилась без какого-либо уведомления. Прилагаю договор и "
-        "выписку. Прошу объяснить, на каком основании была изменена ставка, и "
-        "восстановить первоначальные условия."
+        "Добрый день. Вчера я совершил перевод со своего счёта, "
+        "но деньги ещё не поступили. Эта сумма была списана с моего баланса. "
+        "Я прилагаю квитанцию о переводе. Пожалуйста, объясните, почему перевод "
+        "не был завершён, и сообщите, что мне делать дальше."
     ),
     "kk": (
-        "Қайырлы күн. Мен наурыз айында сіздің бөлімшеңізде депозит аштым, маған "
-        "мөлшерлеме он екі айға бекітілген деп айтылды. Тамыз айында менің "
-        "шотымдағы мөлшерлеме ешқандай хабарламасыз төмендеді. Шартты және "
-        "үзінді көшірмені қоса тіркеп отырмын. Мөлшерлеме қандай негізде "
-        "өзгертілгенін түсіндіріп, бастапқы шарттарды қалпына келтіруіңізді "
-        "сұраймын."
+        "Қайырлы күн. Кеше өз шотымнан ақша аудардым, "
+        "бірақ ақша әлі түскен жоқ. Бұл сома шотымдағы қалдықтан есептен шығарылды. "
+        "Аударым туралы түбіртекті қоса тіркеп отырмын. Аударымның неге аяқталмағанын "
+        "түсіндіріп, әрі қарай не істеу керектігін айтып беруіңізді сұраймын."
     ),
 }
 
