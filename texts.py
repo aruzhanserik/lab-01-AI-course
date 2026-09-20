@@ -44,6 +44,30 @@ COMPLAINT: Dict[str, str] = {
     ),
 }
 
+COMPLAINT_JSON: Dict[str, str] = {
+    "en": (
+        '{"greeting": "Good afternoon.", '
+        '"issue": "I made a transfer from my account yesterday, but the money has not arrived.", '
+        '"amount": "The amount was deducted from my balance.", '
+        '"receipt": "I have attached the transaction receipt.", '
+        '"request": "Please explain why the transfer has not been completed and tell me what I should do next."}'
+    ),
+    "ru": (
+        '{"greeting": "Добрый день.", '
+        '"issue": "Вчера я совершил перевод со своего счёта, но деньги ещё не поступили.", '
+        '"amount": "Эта сумма была списана с моего баланса.", '
+        '"receipt": "Я прилагаю квитанцию о переводе.", '
+        '"request": "Пожалуйста, объясните, почему перевод не был завершён, и сообщите, что мне делать дальше."}'
+    ),
+    "kk": (
+        '{"greeting": "Қайырлы күн.", '
+        '"issue": "Кеше өз шотымнан ақша аудардым, бірақ ақша әлі түскен жоқ.", '
+        '"amount": "Бұл сома шотымдағы қалдықтан есептен шығарылды.", '
+        '"receipt": "Аударым туралы түбіртекті қоса тіркеп отырмын.", '
+        '"request": "Аударымның неге аяқталмағанын түсіндіріп, әрі қарай не істеу керектігін айтып беруіңізді сұраймын."}'
+    ),
+}
+
 #: A short bank notice used as an additional parallel corpus item.
 NOTICE: Dict[str, str] = {
     "en": (
@@ -96,6 +120,7 @@ SYSTEM_PROMPT: Dict[str, str] = {
 CORPUS: Dict[str, Dict[str, str]] = {
     "sentence": SENTENCE,
     "complaint": COMPLAINT,
+    "complaint_json": COMPLAINT_JSON,
     "notice": NOTICE,
     "system_prompt": SYSTEM_PROMPT,
     "kk_shared": KK_SHARED,
