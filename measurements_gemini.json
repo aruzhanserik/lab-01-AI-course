@@ -12,10 +12,40 @@
       "ru": 68,
       "kk": 115
     },
+    "complaint_json": {
+      "en": 74,
+      "ru": 89,
+      "kk": 137
+    },
+    "notice": {
+      "en": 22,
+      "ru": 26,
+      "kk": 48
+    },
     "system_prompt": {
       "en": 41,
       "ru": 52,
       "kk": 88
+    },
+    "system_prompt_ru_terser": {
+      "en": 41,
+      "ru": 45,
+      "kk": 88
+    },
+    "system_prompt_mixed": {
+      "en": 41,
+      "ru": 41,
+      "kk": 41
+    },
+    "kk_shared": {
+      "en": 11,
+      "ru": 11,
+      "kk": 18
+    },
+    "kk_specific": {
+      "en": 11,
+      "ru": 11,
+      "kk": 27
     }
   },
   "request_tokens": {
@@ -23,18 +53,5 @@
     "ru": 120,
     "kk": 203
   },
-  "one_request_billed": {
-    "en": {
-      "input_tokens": 94,
-      "output_tokens": 53
-    },
-    "ru": {
-      "input_tokens": 120,
-      "output_tokens": 99
-    },
-    "kk": {
-      "input_tokens": 203,
-      "output_tokens": 166
-    }
-  }
+  "one_request_billed": null
 }

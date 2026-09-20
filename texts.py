@@ -116,6 +116,22 @@ SYSTEM_PROMPT: Dict[str, str] = {
     ),
 }
 
+SYSTEM_PROMPT_RU_TERSER: Dict[str, str] = {
+    "en": SYSTEM_PROMPT["en"],
+    "ru": (
+        "Вы — банковский ассистент. Отвечайте только по предоставленным "
+        "документам. Если ответа нет, так и скажите. Не выдумывайте номер "
+        "счёта, ставку или дату."
+    ),
+    "kk": SYSTEM_PROMPT["kk"],
+}
+
+SYSTEM_PROMPT_MIXED: Dict[str, str] = {
+    "en": SYSTEM_PROMPT["en"],
+    "ru": SYSTEM_PROMPT["en"],
+    "kk": SYSTEM_PROMPT["en"],
+}
+
 #: Everything the lab measures, keyed by a short id.
 CORPUS: Dict[str, Dict[str, str]] = {
     "sentence": SENTENCE,
@@ -123,6 +139,8 @@ CORPUS: Dict[str, Dict[str, str]] = {
     "complaint_json": COMPLAINT_JSON,
     "notice": NOTICE,
     "system_prompt": SYSTEM_PROMPT,
+    "system_prompt_ru_terser": SYSTEM_PROMPT_RU_TERSER,
+    "system_prompt_mixed": SYSTEM_PROMPT_MIXED,
     "kk_shared": KK_SHARED,
     "kk_specific": KK_SPECIFIC,
 }
