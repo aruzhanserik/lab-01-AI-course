@@ -44,6 +44,34 @@ COMPLAINT: Dict[str, str] = {
     ),
 }
 
+#: A short bank notice used as an additional parallel corpus item.
+NOTICE: Dict[str, str] = {
+    "en": (
+        "Your transfer was received by the bank and is being processed. "
+        "Please wait for the confirmation before contacting support."
+    ),
+    "ru": (
+        "Ваш перевод получен банком и обрабатывается. "
+        "Пожалуйста, дождитесь подтверждения, прежде чем обращаться в поддержку."
+    ),
+    "kk": (
+        "Сіздің аударымыңыз банкке түсті және өңделіп жатыр. "
+        "Қолдау қызметіне хабарласпас бұрын растауды күтіңіз."
+    ),
+}
+
+KK_SHARED: Dict[str, str] = {
+    "en": "The bank checks the transfer and sends a message.",
+    "ru": "Банк проверяет перевод и отправляет сообщение.",
+    "kk": "Банк аударымды тексереді және хабарлама жібереді.",
+}
+
+KK_SPECIFIC: Dict[str, str] = {
+    "en": "The bank checks the transfer and sends a message.",
+    "ru": "Банк проверяет перевод и отправляет сообщение.",
+    "kk": "Әрбір ұйым қызметкері жаңа өтінішті мұқият тексереді.",
+}
+
 #: A system prompt -- the part you resend on every single request.
 SYSTEM_PROMPT: Dict[str, str] = {
     "en": (
@@ -68,5 +96,8 @@ SYSTEM_PROMPT: Dict[str, str] = {
 CORPUS: Dict[str, Dict[str, str]] = {
     "sentence": SENTENCE,
     "complaint": COMPLAINT,
+    "notice": NOTICE,
     "system_prompt": SYSTEM_PROMPT,
+    "kk_shared": KK_SHARED,
+    "kk_specific": KK_SPECIFIC,
 }
