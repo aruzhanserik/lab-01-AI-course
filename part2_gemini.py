@@ -40,14 +40,15 @@ def count_tokens(client: genai.Client, text: str) -> int:
 
 def count_request_tokens(
     client: genai.Client,
-    lang: str,
+    system_prompt_id: str,
+    complaint_lang: str,
 ) -> int:
     """Count tokens for the actual system-prompt + complaint request."""
 
     prompt = (
-        CORPUS["system_prompt"][lang]
+        CORPUS[system_prompt_id][complaint_lang]
         + "\n\n"
-        + CORPUS["complaint"][lang]
+        + CORPUS["complaint"][complaint_lang]
     )
 
     return count_tokens(client, prompt)
@@ -130,20 +131,26 @@ def main() -> int:
 
             print(f"  {item_id:<14} {row}")
 
-        request_tokens = {
-            lang: count_request_tokens(client, lang)
-            for lang in LANGUAGES
-        }
+        request_tokens = {}
 
-        row = "  ".join(
-            f"{lang}={request_tokens[lang]}"
-            for lang in LANGUAGES
-        )
+        for variant in (
+            "system_prompt",
+            "system_prompt_ru_terser",
+            "system_prompt_mixed",
+        ):
+            request_tokens[variant] = {
+                lang: count_request_tokens(client, variant, lang)
+                for lang in LANGUAGES
+            }
 
-        print(
-            f"  {'request':<14} {row} "
-            "(system prompt + complaint)"
-        )
+            row = "  ".join(
+                f"{lang}={request_tokens[variant][lang]}"
+                for lang in LANGUAGES
+            )
+
+            print(
+                f"  {'request_' + variant:<28} {row}"
+            )
 
     except Exception as exc:
         print(f"Gemini API error: {exc}", file=sys.stderr)

@@ -49,9 +49,21 @@
     }
   },
   "request_tokens": {
-    "en": 94,
-    "ru": 120,
-    "kk": 203
+    "system_prompt": {
+      "en": 94,
+      "ru": 120,
+      "kk": 203
+    },
+    "system_prompt_ru_terser": {
+      "en": 94,
+      "ru": 113,
+      "kk": 203
+    },
+    "system_prompt_mixed": {
+      "en": 94,
+      "ru": 109,
+      "kk": 156
+    }
   },
   "one_request_billed": null
 }
